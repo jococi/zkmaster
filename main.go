@@ -2,14 +2,15 @@ package main
 
 import (
 	"fmt"
-	"github.com/koangel/grapeTimer"
+	"github.com/jococi/ZTimer"
+
 )
 
 var MapServer map[int] *WorkServer
 
 func main() {
-	grapeTimer.InitGrapeScheduler(1000,true)
-	grapeTimer.NewTickerLoop(5000,-1,sssTimer,nil)
+	ZTimer.InitGrapeScheduler(1000,true)
+	ZTimer.NewTickerLoop(5000,-1,sssTimer,nil)
 
 	MapServer=make(map[int] *WorkServer)
 	for i:=0;i<10 ;i++  {
